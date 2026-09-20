@@ -1,12 +1,28 @@
-const contactBtn = document.querySelector("#contactBtn");
-const projectsBtn = document.querySelector("#projectsBtn");
+function showProject(projectName) {
 
-contactBtn.addEventListener("click", function () {
-    alert("Thanks for visiting my website!");
-});
+    const popup = document.getElementById("popup");
+    const popupTitle = document.getElementById("popupTitle");
 
-projectsBtn.addEventListener("click", function () {
-    document.querySelector("#projects").scrollIntoView({
-        behavior: "smooth"
-    });
+    popupTitle.textContent = projectName;
+
+    popup.style.display = "flex";
+}
+
+
+function closePopup() {
+
+    const popup = document.getElementById("popup");
+
+    popup.style.display = "none";
+}
+
+
+window.addEventListener("click", function(event) {
+
+    const popup = document.getElementById("popup");
+
+    if (event.target === popup) {
+        popup.style.display = "none";
+    }
+
 });
