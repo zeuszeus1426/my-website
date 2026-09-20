@@ -1,90 +1,173 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeus Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    margin: 0;
+    background-color: #eef4ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
-<body>
+nav {
+    background-color: darkblue;
+    padding: 15px;
+}
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
 
-    <section class="hero">
-    <h1>Hi, I'm Zeus 👋</h1>
-    <h2>CSE Student & Aspiring Developer</h2>
-    <p>I am learning Python, Web Development and building my own projects.</p>
+nav a:hover {
+    text-decoration: underline;
+}
 
-    <a href="#projects">
-        <button>View My Projects</button>
-    </a>
+h1 {
+    color: darkblue;
+    font-size: 40px;
+    margin-top: 40px;
+}
 
-    <a href="#contact">
-        <button>Contact Me</button>
-    </a>
-</section>
+h2 {
+    color: purple;
+}
 
-    <div class="about" id="about">
-        <h2>About Me</h2>
-        <p>I am learning programming and web development.</p>
-    </div>
+p {
+    font-size: 18px;
+}
 
-    <div class="skills" id="skills">
-    <h2>My Skills</h2>
+.about,
+.skills,
+.projects,
+.contact {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+}
 
-    <div class="skills-container">
+.project-card {
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+}
 
-        <div class="skill-card">
-            <h3>🐍 Python</h3>
-            <p>Beginner</p>
-        </div>
+.project-card h3 {
+    color: darkblue;
+}
 
-        <div class="skill-card">
-            <h3>🌐 HTML</h3>
-            <p>Beginner</p>
-        </div>
+button {
+    background-color: darkblue;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-        <div class="skill-card">
-            <h3>🎨 CSS</h3>
-            <p>Beginner</p>
-        </div>
+button:hover {
+    opacity: 0.8;
+}
 
-        <div class="skill-card">
-            <h3>⚡ JavaScript</h3>
-            <p>Beginner</p>
-        </div>
+/* Hero Section */
 
-    </div>
-</div>
+.hero {
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #eef4ff, #ffffff);
+}
 
-    <div class="projects" id="projects">
-        <h2>My Projects</h2>
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
 
-        <div class="project-card">
-            <h3>Zeus Portfolio Website</h3>
-            <p>My first personal portfolio website.</p>
-        </div>
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
 
-        <div class="project-card">
-            <h3>Python Mini Projects</h3>
-            <p>Small Python programs that I build while learning.</p>
-        </div>
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+}
 
-        <button id="projectsBtn">View Projects</button>
-    </div>
+.hero a {
+    text-decoration: none;
+}
 
-    <div class="contact" id="contact">
-        <h2>Contact</h2>
-        <p>Email: zeuszeus1426@gmail.com</p>
-        <button id="contactBtn">Contact Me</button>
-    </div>
+.hero button {
+    margin: 8px;
+}
 
-    <script src="script.js"></script>
+/* Skills Section */
 
-</body>
-</html>
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 180px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    color: darkblue;
+}
+
+.skill-card p {
+    color: #555;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 15px;
+    }
+
+    .about,
+    .skills,
+    .projects,
+    .contact {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .skill-card {
+        width: 80%;
+    }
+}
