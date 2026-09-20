@@ -14,6 +14,8 @@ function closePopup() {
     const popup = document.getElementById("popup");
 
     popup.style.display = "none";
+
+    alert("Thanks for visiting! 👋");
 }
 
 
@@ -22,7 +24,10 @@ window.addEventListener("click", function(event) {
     const popup = document.getElementById("popup");
 
     if (event.target === popup) {
+
         popup.style.display = "none";
+
+        alert("Thanks for visiting! 👋");
     }
 
 });
